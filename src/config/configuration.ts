@@ -1,6 +1,7 @@
 export default () => ({
   environment: process.env.ENVIRONMENT,
   port: parseInt(process.env.PORT, 10),
+  timeout: process.env.TIMEOUT,
   pullLimit: process.env.GCLOUD_PUBSUB_SUBSCRIPTION_PULL_LIMIT,
   api: {
     topic: {
