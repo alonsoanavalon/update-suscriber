@@ -1,7 +1,7 @@
 import { Module } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
-import configuration from './config/configuration';
-import { LoggerService } from './logger/logger.service';
+import configuration from '../config/configuration';
+import { LoggerService } from './logger.service';
 
 @Module({
   imports: [
@@ -9,7 +9,7 @@ import { LoggerService } from './logger/logger.service';
       load: [configuration],
     }),
   ],
-  controllers: [],
   providers: [LoggerService],
+  exports: [LoggerService],
 })
-export class AppModule {}
+export class LoggerModule {}
