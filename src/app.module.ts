@@ -11,7 +11,6 @@ import { SuscriberModule } from './suscriber/suscriber.module';
     }),
     SuscriberModule,
   ],
-  controllers: [],
   providers: [LoggerService],
 })
 export class AppModule {}
